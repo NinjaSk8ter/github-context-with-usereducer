@@ -3,17 +3,13 @@ import GithubContext from '../../context/github/GithubContext'
 import Spinner from '../layout/Spinner'
 import UserItem from './UserItem'
 
-//import axios from 'axios'
-const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN
-
 function UserResults() {
     const githubContext = useContext(GithubContext)
     const { users, loading, fetchUsers } = githubContext
 
-    useEffect(() => {
-        fetchUsers()
-    }, [])
+    //useEffect(() => {
+    //   fetchUsers()
+    //}, [])
 
     if (!loading) {
         return (
